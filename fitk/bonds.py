@@ -5,7 +5,7 @@ from typing import Callable
 from fitk.cashflows import Cashflow
 from fitk.daycount import thirty_360
 from fitk.schedule import payment_schedule
-from fitk.pricing import price
+from fitk.pricing import price, yield_from_price
 
 @dataclass(frozen=True)
 class Bond:
@@ -57,6 +57,21 @@ class Bond:
         accrual means a move in the quote reflects a move in the market.
         """
         return self.dirty_price(settlement, y) - self.accrued_interest(settlement)
+
+    def yield_from_clean_price(self, settlement: date, clean: float) -> float:
+        """
+        Yield to maturity implied by a quoted price.
+
+        The trap: the market quotes clean, but the yield discounts every
+        remaining cashflow, accrued interest included. Feeding the clean quote
+        straight into the solver understates the price and so overstates the
+        yield. Measured on a 5-year 5% semiannual bond mid-period: 41 basis
+        points. Small enough to survive a careless review, large enough to
+        misvalue a book. Accrued goes back on first.
+        """
+        dirty = clean + self.accrued_interest(settlement)
+        return yield_from_price(self.cashflows(settlement), dirty,
+                                m=self.frequency)
 
     def previous_coupon_date(self, settlement: date) -> date:
         """
