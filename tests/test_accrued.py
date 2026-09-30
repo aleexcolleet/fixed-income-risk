@@ -67,6 +67,7 @@ def test_every_act_convention_gives_the_icma_answer():
     assert semiannual(daycount=thirty_360).accrued_interest(settle) == pytest.approx(2.5 * 104 / 360 * 2)
     assert semiannual(daycount=thirty_360).accrued_interest(settle) != pytest.approx(expected, abs=1e-6)
 
+
 def test_clean_equals_dirty_on_a_coupon_date():
     bond = semiannual(daycount=act_365f)
     d = date(2027, 7, 1)
