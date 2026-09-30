@@ -1,0 +1,19 @@
+# Spanish Treasury (Tesoro Público) auction of Obligaciones del Estado,
+# held 17 September 2026, settled 22 September 2026.
+# Source: BOE-A-2026-20253, Resolucion de 21 de septiembre de 2026 de la
+#   Direccion General del Tesoro y Politica Financiera.
+#   https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20253
+#
+# clean_price   = "precio medio ponderado (ex-cupon)", per 100 of face
+# accrued_boe   = "importe del cupon corrido" as the BOE prints it (2 decimals)
+# yield_boe     = "rendimiento interno correspondiente al precio medio
+#                  ponderado" -- the Treasury's own yield, which is the figure
+#                  this project checks itself against.
+# accrual_start = first date the bond accrues from. Blank means the bond is
+#                  seasoned, so accrual starts at the previous coupon date.
+#                  For the 2036 line it is derived, not published: see
+#                  docs/step9-real-data.md.
+name,coupon_percent,maturity,clean_price,accrued_boe,yield_boe_percent,accrual_start
+Obligacion 0.70% 30/04/2032,0.70,2032-04-30,85.704,0.28,3.558,
+Obligacion 3.45% 31/10/2034,3.45,2034-10-31,97.618,3.08,3.796,
+Obligacion 3.40% 31/10/2036,3.40,2036-10-31,95.415,1.03,3.960,2026-06-03
