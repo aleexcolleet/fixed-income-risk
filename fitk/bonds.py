@@ -6,6 +6,7 @@ from fitk.cashflows import Cashflow
 from fitk.daycount import thirty_360
 from fitk.schedule import payment_schedule
 from fitk.pricing import price, yield_from_price
+from fitk import risk
 
 @dataclass(frozen=True)
 class Bond:
@@ -72,6 +73,29 @@ class Bond:
         dirty = clean + self.accrued_interest(settlement)
         return yield_from_price(self.cashflows(settlement), dirty,
                                 m=self.frequency)
+
+    def modified_duration(self, settlement: date, y: float) -> float:
+        """Percentage price fall per unit rise in yield, in years.
+
+        Imported as `risk`, not by function name: a method called
+        modified_duration and a module function called modified_duration in
+        the same file is a shadowing accident waiting to happen.
+        """
+        return risk.modified_duration(self.cashflows(settlement), y,
+                                      m=self.frequency)
+
+    def convexity(self, settlement: date, y: float) -> float:
+        """Curvature of the price-yield relationship."""
+        return risk.convexity(self.cashflows(settlement), y, m=self.frequency)
+
+    def dv01(self, settlement: date, y: float) -> float:
+        """
+        Currency change in value per basis point, on this bond's own face.
+
+        Scale linearly for a real position: a 10m nominal holding has 100,000
+        times the DV01 of this 100-face instrument.
+        """
+        return risk.dv01(self.cashflows(settlement), y, m=self.frequency)
 
     def previous_coupon_date(self, settlement: date) -> date:
         """
