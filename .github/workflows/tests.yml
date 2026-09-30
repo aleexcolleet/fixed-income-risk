@@ -1,0 +1,42 @@
+name: tests
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      # pytest only. The library itself has no dependencies, on purpose, and
+      # this job would fail loudly if one crept in.
+      - name: Install pytest
+        run: python -m pip install --upgrade pip pytest
+
+      - name: Run the suite
+        run: python -m pytest -q
+
+      # The figures in docs/ and in the README come from these two scripts.
+      # Running them in CI means a change that quietly moves a published
+      # number breaks the build instead of going unnoticed.
+      - name: Reproduce the step 9 figures
+        run: python scripts/step9_report.py
+
+      - name: Redraw the curve chart and check it is committed
+        run: |
+          python scripts/plot_curve.py
+          git diff --exit-code -- docs/curve.svg

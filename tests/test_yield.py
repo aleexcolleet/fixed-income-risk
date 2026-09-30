@@ -38,7 +38,7 @@ def test_reference_bond_recovers_four_percent():
     assert yield_from_price(cfs, 102.775091) == pytest.approx(0.04, abs=1e-7)
 
 
-# --- the economics an interviewer checks in the first two minutes ----------
+# --- the economics: discount, par and premium ------------------------------
 
 def test_par_price_gives_the_coupon_rate():
     for coupon in (0.01, 0.04, 0.09):

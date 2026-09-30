@@ -104,7 +104,7 @@ def test_coupon_bond_duration_is_below_its_maturity():
     assert macaulay_duration(flows(10, 0.0), 0.04) == pytest.approx(10.0)
 
 
-# --- the comparative statics an interviewer asks for -----------------------
+# --- comparative statics: the direction each input moves duration ----------
 
 def test_duration_falls_as_the_coupon_rises():
     """More money early pulls the average payment time in."""
@@ -162,7 +162,7 @@ def test_dv01_approximates_the_price_move_for_one_basis_point():
 
 
 def test_dollar_duration_adds_but_modified_duration_does_not():
-    """Why a risk report is in DV01 and a fact sheet is in duration.
+    """Why a risk report is in DV01 and a fund fact sheet is in duration.
 
     Dollar duration is currency, so it sums. Modified duration is a ratio, so
     the portfolio's is the value-weighted average — never the plain average,
