@@ -5,6 +5,7 @@ from typing import Callable
 from fitk.cashflows import Cashflow
 from fitk.daycount import thirty_360
 from fitk.schedule import payment_schedule
+from fitk.pricing import price
 
 @dataclass(frozen=True)
 class Bond:
@@ -36,3 +37,57 @@ class Bond:
         last = flows[-1]
         flows[-1] = Cashflow(last.t, last.amount + self.face)
         return flows
+
+    def dirty_price(self, settlement: date, y: float) -> float:
+        """
+        What you actually pay: the present value of every remaining cashflow.
+
+        This includes the whole of the next coupon, part of which the seller
+        earned. The present value knows nothing about that split — the split
+        is a quoting convention, not a valuation concept.
+        """
+        return price(self.cashflows(settlement), y, m=self.frequency)
+
+    def clean_price(self, settlement: date, y: float) -> float:
+        """
+        The quoted price: dirty less accrued interest.
+
+        Markets quote this because the dirty price sawtooths — it climbs as
+        interest accrues and drops by the coupon on payment day. Removing the
+        accrual means a move in the quote reflects a move in the market.
+        """
+        return self.dirty_price(settlement, y) - self.accrued_interest(settlement)
+
+    def previous_coupon_date(self, settlement: date) -> date:
+        """
+        Start of the accrual period containing settlement.
+
+        For a bond settling before its first coupon, interest accrues from
+        the issue date. Missing this case is how newly issued bonds break
+        pricing systems.
+        """
+        past = [d for d in self.payment_dates() if d <= settlement]
+        return past[-1] if past else self.issue_date
+
+    def next_coupon_date(self, settlement: date) -> date:
+        """End of the accrual period containing settlement.
+
+        `next()` over a generator returns the first match and stops there.
+        It raises StopIteration if none exists, which is correct: asking for
+        the accrual period of a matured bond is a caller error, not a case to
+        swallow and propagate as None.
+        """
+        return next(d for d in self.payment_dates() if d > settlement)
+
+    def accrued_interest(self, settlement: date) -> float:
+        """
+        Interest earned by the seller, paid to them on top of the quote.
+
+        The ratio form makes any ACT convention agree: the denominator
+        cancels, so ACT/360, ACT/365F and ACT/ACT ICMA all give the same
+        answer. Only 30/360 differs, because it counts days differently.
+        """
+        payment = self.face * self.coupon / self.frequency
+        prev = self.previous_coupon_date(settlement)
+        nxt = self.next_coupon_date(settlement)
+        return payment * self.daycount(prev, settlement) / self.daycount(prev, nxt)
