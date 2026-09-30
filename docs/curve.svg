@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="470" viewBox="0 0 840 470" font-family="Helvetica,Arial,sans-serif">
+<rect width="840" height="470" fill="#ffffff"/>
+<line x1="74" y1="391.4" x2="630" y2="391.4" stroke="#d8d8d8" stroke-width="1"/>
+<text x="64" y="395.4" text-anchor="end" font-size="12" fill="#1b1b1b">2.50%</text>
+<line x1="74" y1="339.4" x2="630" y2="339.4" stroke="#d8d8d8" stroke-width="1"/>
+<text x="64" y="343.4" text-anchor="end" font-size="12" fill="#1b1b1b">2.75%</text>
+<line x1="74" y1="287.3" x2="630" y2="287.3" stroke="#d8d8d8" stroke-width="1"/>
+<text x="64" y="291.3" text-anchor="end" font-size="12" fill="#1b1b1b">3.00%</text>
+<line x1="74" y1="235.3" x2="630" y2="235.3" stroke="#d8d8d8" stroke-width="1"/>
+<text x="64" y="239.3" text-anchor="end" font-size="12" fill="#1b1b1b">3.25%</text>
+<line x1="74" y1="183.3" x2="630" y2="183.3" stroke="#d8d8d8" stroke-width="1"/>
+<text x="64" y="187.3" text-anchor="end" font-size="12" fill="#1b1b1b">3.50%</text>
+<line x1="74" y1="131.2" x2="630" y2="131.2" stroke="#d8d8d8" stroke-width="1"/>
+<text x="64" y="135.2" text-anchor="end" font-size="12" fill="#1b1b1b">3.75%</text>
+<line x1="74" y1="79.2" x2="630" y2="79.2" stroke="#d8d8d8" stroke-width="1"/>
+<text x="64" y="83.2" text-anchor="end" font-size="12" fill="#1b1b1b">4.00%</text>
+<line x1="74" y1="412" x2="630" y2="412" stroke="#1b1b1b" stroke-width="1.2"/>
+<line x1="74.0" y1="412" x2="74.0" y2="417" stroke="#1b1b1b" stroke-width="1.2"/>
+<text x="74.0" y="432" text-anchor="middle" font-size="12" fill="#1b1b1b">0y</text>
+<line x1="163.7" y1="412" x2="163.7" y2="417" stroke="#1b1b1b" stroke-width="1.2"/>
+<text x="163.7" y="432" text-anchor="middle" font-size="12" fill="#1b1b1b">5y</text>
+<line x1="253.4" y1="412" x2="253.4" y2="417" stroke="#1b1b1b" stroke-width="1.2"/>
+<text x="253.4" y="432" text-anchor="middle" font-size="12" fill="#1b1b1b">10y</text>
+<line x1="343.0" y1="412" x2="343.0" y2="417" stroke="#1b1b1b" stroke-width="1.2"/>
+<text x="343.0" y="432" text-anchor="middle" font-size="12" fill="#1b1b1b">15y</text>
+<line x1="432.7" y1="412" x2="432.7" y2="417" stroke="#1b1b1b" stroke-width="1.2"/>
+<text x="432.7" y="432" text-anchor="middle" font-size="12" fill="#1b1b1b">20y</text>
+<line x1="522.4" y1="412" x2="522.4" y2="417" stroke="#1b1b1b" stroke-width="1.2"/>
+<text x="522.4" y="432" text-anchor="middle" font-size="12" fill="#1b1b1b">25y</text>
+<line x1="612.1" y1="412" x2="612.1" y2="417" stroke="#1b1b1b" stroke-width="1.2"/>
+<text x="612.1" y="432" text-anchor="middle" font-size="12" fill="#1b1b1b">30y</text>
+<text x="352" y="458" text-anchor="middle" font-size="12" fill="#555">years to maturity</text>
+<polyline points="78.5,370.4 83.0,332.4 87.5,304.7 91.9,284.8 96.4,275.8 100.9,266.8 105.4,257.8 109.9,248.8 114.4,246.8 118.8,244.7 123.3,242.7 127.8,240.7 132.3,239.7 136.8,238.8 141.3,237.8 145.7,236.9 150.2,235.5 154.7,234.1 159.2,232.7 163.7,231.3 168.2,229.3 172.6,227.2 177.1,225.2 181.6,223.2 186.1,220.7 190.6,218.2 195.1,215.7 199.5,213.2 204.0,210.5 208.5,207.8 213.0,205.1 217.5,202.4 222.0,199.6 226.5,196.9 230.9,194.1 235.4,191.3 239.9,188.6 244.4,185.9 248.9,183.3 253.4,180.6 257.8,178.1 262.3,175.7 266.8,173.2 271.3,170.8 275.8,168.3 280.3,165.9 284.7,163.4 289.2,161.0 293.7,159.1 298.2,157.2 302.7,155.3 307.2,153.4 311.6,151.5 316.1,149.6 320.6,147.7 325.1,145.8 329.6,143.9 334.1,142.0 338.5,140.1 343.0,138.2 347.5,137.2 352.0,136.2 356.5,135.2 361.0,134.2 365.5,133.1 369.9,132.1 374.4,131.1 378.9,130.1 383.4,129.1 387.9,128.0 392.4,127.0 396.8,126.0 401.3,125.0 405.8,124.0 410.3,123.0 414.8,121.9 419.3,120.9 423.7,119.9 428.2,118.9 432.7,117.9 437.2,117.7 441.7,117.6 446.2,117.4 450.6,117.3 455.1,117.1 459.6,117.0 464.1,116.8 468.6,116.7 473.1,116.5 477.5,116.4 482.0,116.2 486.5,116.1 491.0,115.9 495.5,115.8 500.0,115.6 504.5,115.4 508.9,115.3 513.4,115.1 517.9,115.0 522.4,114.8 526.9,115.3 531.4,115.7 535.8,116.1 540.3,116.6 544.8,117.0 549.3,117.4 553.8,117.8 558.3,118.3 562.7,118.7 567.2,119.1 571.7,119.5 576.2,120.0 580.7,120.4 585.2,120.8 589.6,121.3 594.1,121.7 598.6,122.1 603.1,122.5 607.6,123.0 612.1,123.4 616.5,123.4 621.0,123.4 625.5,123.4 630.0,123.4" fill="none" stroke="#8a8f98" stroke-width="2.4"/>
+<line x1="174.6" y1="226.7" x2="174.6" y2="171.0" stroke="#b3242b" stroke-width="1.4" stroke-dasharray="3 3"/>
+<line x1="183.6" y1="171.0" x2="294.4" y2="171.0" stroke="#d8d8d8" stroke-width="1"/>
+<circle cx="174.6" cy="226.7" r="5" fill="#ffffff" stroke="#8a8f98" stroke-width="2"/>
+<circle cx="174.6" cy="171.0" r="5.5" fill="#b3242b"/>
+<text x="301.4" y="175.5" font-size="12.5" fill="#1b1b1b">0.70% 2032  <tspan fill="#b3242b" font-weight="bold">+26.7bp</tspan></text>
+<line x1="219.5" y1="204.6" x2="219.5" y2="121.7" stroke="#b3242b" stroke-width="1.4" stroke-dasharray="3 3"/>
+<line x1="228.5" y1="121.7" x2="294.4" y2="121.7" stroke="#d8d8d8" stroke-width="1"/>
+<circle cx="219.5" cy="204.6" r="5" fill="#ffffff" stroke="#8a8f98" stroke-width="2"/>
+<circle cx="219.5" cy="121.7" r="5.5" fill="#b3242b"/>
+<text x="301.4" y="126.2" font-size="12.5" fill="#1b1b1b">3.45% 2034  <tspan fill="#b3242b" font-weight="bold">+39.8bp</tspan></text>
+<line x1="255.4" y1="185.1" x2="255.4" y2="87.6" stroke="#b3242b" stroke-width="1.4" stroke-dasharray="3 3"/>
+<line x1="264.4" y1="87.6" x2="294.4" y2="87.6" stroke="#d8d8d8" stroke-width="1"/>
+<circle cx="255.4" cy="185.1" r="5" fill="#ffffff" stroke="#8a8f98" stroke-width="2"/>
+<circle cx="255.4" cy="87.6" r="5.5" fill="#b3242b"/>
+<text x="301.4" y="92.1" font-size="12.5" fill="#1b1b1b">3.40% 2036  <tspan fill="#b3242b" font-weight="bold">+46.8bp</tspan></text>
+<text x="74" y="24" font-size="15" font-weight="bold" fill="#1b1b1b">Spanish sovereign spread over the euro area AAA curve</text>
+<text x="74" y="39" font-size="11.5" fill="#555">settlement 22 September 2026 &#183; ECB AAA spot curve, annually compounded &#183; Tesoro auction of 17 September (BOE-A-2026-20253)</text>
+<line x1="644" y1="64" x2="666" y2="64" stroke="#8a8f98" stroke-width="2.4"/>
+<text x="673" y="68" font-size="11.5" fill="#1b1b1b">ECB AAA curve</text>
+<circle cx="655" cy="88" r="5" fill="#ffffff" stroke="#8a8f98" stroke-width="2"/>
+<text x="673" y="92" font-size="11.5" fill="#1b1b1b">bond priced off it</text>
+<circle cx="655" cy="112" r="5.5" fill="#b3242b"/>
+<text x="673" y="116" font-size="11.5" fill="#1b1b1b">yield actually paid</text>
+</svg>
