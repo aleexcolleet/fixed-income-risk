@@ -1,0 +1,25 @@
+# ECB euro area AAA-rated central government bond spot yield curve.
+# Source: ECB Data Portal, series YC.B.U2.EUR.4F.G_N_A.SV_C_YM.SR_<tenor>
+#   https://data.ecb.europa.eu/data/datasets/YC/YC.B.U2.EUR.4F.G_N_A.SV_C_YM.SR_10Y
+# Observation date: 22 September 2026 (business-daily series).
+# Fitted with the Svensson model. Rates are CONTINUOUSLY COMPOUNDED,
+# percent per annum -- see docs/step9-real-data.md, this is not optional detail.
+tenor_years,zero_rate_percent
+0.25,2.567849
+0.5,2.745375
+0.75,2.874700
+1,2.967921
+2,3.135563
+3,3.173357
+4,3.190868
+5,3.216936
+6,3.254793
+7,3.300997
+8,3.351407
+9,3.402742
+10,3.452740
+12,3.543534
+15,3.649044
+20,3.743275
+25,3.757280
+30,3.717737
